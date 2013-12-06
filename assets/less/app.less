@@ -6,9 +6,31 @@
 @import "animate.less";
 @import "fonts.less";
 
+
 /* Global Styles */
-html,
+
 body {
 
-	background: black;
+	background: #d2c0ad;
+}
+.radial {
+	position: fixed;
+	z-index: -1;
+	top: 0px; left: 0px;
+	#gradient.radial(lighten(@cream,15%),@cream);
+	height: 100%;
+	width: 100%;
+	
+}
+.mistletoe {
+	
+	background: url(../img/leaves_repeat.png) repeat;
+	height: 108px;
+	
+}
+
+
+.this_is_ie {
+	
+	
 }
