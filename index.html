@@ -2,7 +2,6 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if IE]>         <html class="no-js this_is_ie"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
@@ -17,10 +16,80 @@
 					
 	</head>
 	<body>
-		<div class="radial"></div>
-		<div class="mistletoe"></div>
-				
-		<!--  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+		<div class="radial"></div><div class="mistletoe"></div>
+		<div class="container">
+			<div class="balls">
+				<img id="aeg" src="assets/img/aeg_ball.png" width="158" height="369">
+				<img id="dirtdevil" src="assets/img/dirtdevil_ball.png" width="148" height="411">			
+				<img id="homelite" src="assets/img/homelite_ball.png" width="161" height="523">			
+				<img id="vax" src="assets/img/vax_ball.png" width="153" height="394">			
+				<img id="ryobi" src="assets/img/ryobi_ball.png" width="155" height="411">			
+				<img id="oreck" src="assets/img/oreck_ball.png" width="139" height="293">			
+				<img id="milwaukee" src="assets/img/milwaukee_ball.png" width="153" height="264">			
+				<img id="hoover" src="assets/img/hoover_ball.png" width="161" height="293">			
+			</div>	
+			<div class="clicktags">
+				<a id="aeg_click" href="#aeg_content"></a>
+				<a id="dirtdevil_click" href="#dirtdevil_content"></a>
+				<a id="homelite_click" href="#homelite_content"></a>			
+				<a id="vax_click" href="#vax_content"></a>			
+				<a id="ryobi_click" href="#ryobi_content"></a>			
+				<a id="oreck_click" href="#oreck_content"></a>			
+				<a id="milwaukee_click" href="#milwaukee_content"></a>			
+				<a id="hoover_click" href="#hoover_content"></a>			
+			</div>
+			<div class="greeting">
+				<h1>Season Greetings</h1>
+				<h2>Wishing you Happy Holidays and a Prosperous New Year</h2>
+			</div>
+			
+					
+			<p class="terms"><a href="http://www.ttigroup.com">www.ttigroup.com</a><br />
+				© 2013 Techtronic Industries Co. Ltd. All rights reserved.
+				TTI group owns and is entitled to use and manage avvll trademarks in this publication except AEG® which is a registered trademark of AB Electrolux (publ.) and RYOBI® which is a registered trademark of Ryobi Limited both used under license.</p>
+
+			<div class="tti_logo">
+				<a href="http://www.ttigroup.com"><img src="assets/img/tti_logo.png" width="83" height="75"></a>
+			</div>
+		
+		</div> <!--  end container -->
+		
+		
+		<!-- This contains the hidden content for inline calls -->
+		<div style='display:none'>
+			<div class='lightbox' id='aeg_content'>
+				<p>AEG® POWERTOOLS hammers are engineered for outstanding reliability and durability.</p>
+			</div>
+			<div class='lightbox' id='milwaukee_content'>
+				<p>M18 FUEL™ Drill/Drivers are pioneers in a new class of durability and performance for the professional tradesvman, delivering up to 10X longer motor life, 2X more runtime and 25% more power.</p>
+			</div>
+			<!-- <div class='lightbox' id='ryobi_content'>
+				<p>RYOBI® 18-VOLT NAILER<br />
+				Cordless convenience featuring Airstrike Technology, which eliminates the need for noisy compressors, bulky hoses or expensive gas cartridges.</p>
+			</div> -->
+			<div class='lightbox' id='ryobi_content'>
+				<p>RYOBI® 40V CORDLESS MOWER<br />
+				Designed for the perfect marriage of Power and Convenience, this mower is powered by a high-capacity 40V Lithium-ion battery. That means fade-free performance, and longer runtime. This lightweight cordless mower is designed for instant starting, and clean running- with no gas and oil required. With single-lever height adjustment and whisper quiet running, this mower is ideal for small yards and close neighborhoods.</p>
+			</div>
+			<div class='lightbox' id='homelite_content'>
+				<p>HOMELITE® chain saws deliver incredible cutting performance in a light weight design for user comfort.</p>
+			</div>
+			<div class='lightbox' id='hoover_content'>
+				<p>Manage your cleaning tasks with a lightweight and easy maneuverable vacuum. The Hoover® Air™ Steerable Bagless Upright is your answer to whole-home cleaning. Easily clean from room to room and go up or downstairs with this lightweight design. It also comes equipped with our exclusive WindTunnel® 3 Technology that lifts and removes deep down embedded dirt with 3 channels of suction.</p>
+			</div>
+			<div class='lightbox' id='vax_content'>
+				<p>VAX® RAPIDE® ULTIMATE
+				The very latest in deep cleaning and quick drying technologies to provide ease of use and outstanding cleaning performance.</p>
+			</div>
+			<div class='lightbox' id='dirtdevil_content'>
+				<p>Uprights are powerful and are designed with a variety of attachments to quickly and effectively remove dirt, dust and debris, and pet hair from carpeted surfaces in your home.</p>
+			</div>
+			<div class='lightbox' id='oreck_content'>
+				<p>Oreck vacuum cleaners are designed with one purpose in mind: to simplify our customers' lives by easing the effort it takes to clean your home.</p>
+			</div>
+		</div>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="assets/js/plugins/jquery-1.10.2.min.js"><\/script>')</script>
 		<script src="assets/js/scripts.min.js"></script>
 
