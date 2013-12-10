@@ -27,12 +27,15 @@ $(document).ready(function() {
 /*
 */
 	if ($("html").hasClass("lt-ie8")) {
-	
+
 	  // add JS for IE6+7 here
+
+		$("#ball-map area").colorbox({rel: $(this).attr('href'), inline:true, opacity: 0, transition: "none"});
 	  
 	} else {
 
-
+  
+  
 		//$.fn.snow({ minSize: 20, maxSize: 45, newOn: 300, flakeColor: '#fff' });
 		//$('.snowfall').snowfall({image :"assets/img/snowflake.png", flakeCount : 100, maxSpeed : 10});
  /*
