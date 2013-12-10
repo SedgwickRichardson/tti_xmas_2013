@@ -13,7 +13,10 @@ $(document).ready(function() {
 */
 	if ($("html").hasClass("lt-ie8")) {
 	
+	  // add JS for IE6+7 here
+	  
 	} else {
+	
 		$.fn.snow({ minSize: 20, maxSize: 45, newOn: 300, flakeColor: '#fff' });
 		
 		// initiate music
@@ -33,11 +36,9 @@ $(document).ready(function() {
 		
 		//colorbox
 		$(".clicktags a").colorbox({
-				inline:true, 
-				//width:"740px", 
-				//height:"500px",
-				opacity: 0,
-				transition: "none"
+			inline:true, 
+			opacity: 0,
+			transition: "none"
 			
 		});
 	}
