@@ -3,7 +3,7 @@
  */
 @import "font-awesome/font-awesome.less";
 @import "bootstrap/bootstrap.less";
-@import "animate.less";
+//@import "animate.less";
 @import "fonts.less";
 @import "ie.less";
 
@@ -13,6 +13,35 @@ body {
 
 	background: #d2c0ad url(../img/bg.jpg) center center;
 	overflow-x:hidden;
+}
+
+/* Preloader */
+#preloader {
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:#fff; /* change if the mask should have another color then white */
+	z-index:99; /* makes sure it stays on top */
+}
+
+#status {
+	width:200px;
+	height:200px;
+	position:absolute;
+	left:50%; /* centers the loading animation horizontally one the screen */
+	top:50%; /* centers the loading animation vertically one the screen */
+	background-image:url(../img/status.gif); /* path to your loading animation */
+	background-repeat:no-repeat;
+	background-position:center;
+	margin:-100px 0 0 -100px; /* is width and height divided by two */
+}
+
+.wrapper {
+  
+  display: none;
+  
 }
 /*
 .radial {
@@ -25,6 +54,16 @@ body {
 	
 }
 */
+.snowfall {
+  
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left:0px;
+  height: 500px;
+  overflow: hidden;
+  
+}
 .mistletoe {
 	
 	background: url(../img/leaves_repeat.png) repeat;
@@ -50,7 +89,7 @@ body {
 	img {
 		
 		position: absolute;
-		top: -108px;
+		top: -610px;
 		
 	}
 	#aeg { left: 0px; z-index: 2000; }
@@ -61,6 +100,8 @@ body {
 	#hoover { left: 390px; z-index: 2000;  }
 	#dirtdevil { left: 460px; z-index: 100; }
 	#oreck { left: 530px; z-index: 50; }
+	
+	
 }
 .clicktags {
 	
@@ -122,6 +163,7 @@ body {
 	position: absolute;
 	top: 360px;
 	right: 30px;
+	display: none;
 	h1,h2 {
 		
 		font-family: @headline-font;		
@@ -142,6 +184,10 @@ body {
 	h2 {
 		font-size: 23px;
 		
+	}
+	.fa {
+  	 color: @copy-color;
+  	 cursor:pointer;
 	}
 	
 }
@@ -179,6 +225,7 @@ body {
 	width: 666px;
 	height: 460px;
 	margin: 20px;
+	position: relative;
 
 	p {
 		display: block;
@@ -186,8 +233,18 @@ body {
 		width: 261px;
 		color: white;
 		font-family:@body-font;
-	
+    z-index: 1000;
+    position: relative;
 	}
+	img {
+  	
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	z-index: 1;
+	}
+	
+/*
 	&#aeg_content { background: url(../img/lightbox/aeg.jpg) no-repeat; }
 	&#dirtdevil_content { background: url(../img/lightbox/dirtdevil.jpg) no-repeat; }
 	&#homelite_content { background: url(../img/lightbox/homelite.jpg) no-repeat; }
@@ -196,6 +253,7 @@ body {
 	&#oreck_content { background: url(../img/lightbox/oreck.jpg) no-repeat; }
 	&#ryobi_content { background: url(../img/lightbox/ryobi.jpg) no-repeat; }
 	&#vax_content { background: url(../img/lightbox/vax.jpg) no-repeat; }
+*/
 	
 }
 /*

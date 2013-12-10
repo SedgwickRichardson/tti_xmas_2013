@@ -1,23 +1,49 @@
+if (!$("html").hasClass("lt-ie8")) {
+  $(window).load(function() { // makes sure the whole site is loaded
+  	$('#status').fadeOut(); // will first fade out the loading animation
+  	$('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+  	$('.wrapper').delay(350).fadeIn('fast', function() {
+    	
+    	$('.snowfall').snowfall({
+    		image :"assets/img/snowflake.png", 
+    		minSize: 10, 
+    		maxSize:32,
+    		flakeCount: 20,
+    		maxSpeed: 2
+    	});
+      $(".balls img").each(function(index) {
+        var r = Math.floor((Math.random()*300)+1);
+        $(this).delay(r).animate({top:-108},{duration:1000, easing: 'easeOutBounce'});    	
+      });
+      $(".greeting").delay(600).fadeIn();
+  	});
+  	
+  });
+}
 $(document).ready(function() {
 
 
 	// initiate snow fall
 /*
-	$(document).snowfall({
-		image :"assets/img/snowflake.png", 
-		minSize: 10, 
-		maxSize:32,
-		flakeCount: 20,
-		maxSpeed: 2
-	});
 */
 	if ($("html").hasClass("lt-ie8")) {
 	
 	  // add JS for IE6+7 here
 	  
 	} else {
-	
-		$.fn.snow({ minSize: 20, maxSize: 45, newOn: 300, flakeColor: '#fff' });
+
+
+		//$.fn.snow({ minSize: 20, maxSize: 45, newOn: 300, flakeColor: '#fff' });
+		//$('.snowfall').snowfall({image :"assets/img/snowflake.png", flakeCount : 100, maxSpeed : 10});
+ /*
+ 	$('.snowfall').snowfall({
+  		image :"assets/img/snowflake.png", 
+  		minSize: 10, 
+  		maxSize:32,
+  		flakeCount: 20,
+  		maxSpeed: 2
+  	});
+*/
 		
 		// initiate music
 		soundManager.setup({
@@ -34,6 +60,18 @@ $(document).ready(function() {
 		  }
 		});
 		
+		$(".fa").click(function() {
+      
+      if ($(this).hasClass("fa-volume-up")) {  		
+    		soundManager.pause('aSound');
+        $(this).removeClass("fa-volume-up").addClass("fa-volume-off");
+      } else {
+    		soundManager.resume('aSound');
+        $(this).removeClass("fa-volume-off").addClass("fa-volume-up");        
+        
+      }
+  		
+		});
 		//colorbox
 		$(".clicktags a").colorbox({
 			inline:true, 
@@ -41,5 +79,11 @@ $(document).ready(function() {
 			transition: "none"
 			
 		});
+/*
+    $(".clicktags a").hover(function() {
+      
+      $("#aeg").css("top","-120px");
+    });
+*/
 	}
 });
