@@ -5,14 +5,16 @@
 @import "bootstrap/bootstrap.less";
 @import "animate.less";
 @import "fonts.less";
-
+@import "ie.less";
 
 /* Global Styles */
 
 body {
 
-	background: #d2c0ad;
+	background: #d2c0ad url(../img/bg.jpg) center center;
+	overflow-x:hidden;
 }
+/*
 .radial {
 	position: fixed;
 	z-index: -1;
@@ -22,6 +24,7 @@ body {
 	width: 100%;
 	
 }
+*/
 .mistletoe {
 	
 	background: url(../img/leaves_repeat.png) repeat;
@@ -47,7 +50,7 @@ body {
 	img {
 		
 		position: absolute;
-		top: -110px;
+		top: -108px;
 		
 	}
 	#aeg { left: 0px; z-index: 2000; }
@@ -55,7 +58,7 @@ body {
 	#milwaukee { left: 120px; z-index: 1000; }
 	#ryobi { left: 160px; z-index: 100;}
 	#vax { left: 320px; z-index: 1000; }
-	#hoover { left: 370px; z-index: 2000;  }
+	#hoover { left: 390px; z-index: 2000;  }
 	#dirtdevil { left: 460px; z-index: 100; }
 	#oreck { left: 530px; z-index: 50; }
 }
@@ -96,7 +99,7 @@ body {
 			top: 160px;
 		}			
 		&#hoover_click {
-			left: 470px;
+			left: 490px;
 			top: 22px;
 		}			
 		&#dirtdevil_click {
