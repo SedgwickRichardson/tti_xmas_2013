@@ -43,6 +43,14 @@ body {
   display: none;
   
 }
+.instruction {
+  
+  position: absolute;
+  left: 382px;
+  top: 18px;
+  display: none;
+  
+}
 /*
 .radial {
 	position: fixed;
@@ -60,7 +68,8 @@ body {
   width: 100%;
   top: 0px;
   left:0px;
-  height: 500px;
+  height: 600px;
+  max-height: 600px; 
   overflow: hidden;
   
 }
@@ -69,7 +78,7 @@ body {
 	background: url(../img/leaves_repeat.png) repeat;
 	height: 108px;
 	position: relative;
-	z-index: 2000;
+	z-index: 9000;
 	
 }
 .container {
@@ -151,12 +160,26 @@ body {
 			left: 620px;
 			top: 20px;
 		}			
-			
-			
-		
 		
 	}
 	
+}
+.ryobi_click {
+  
+ a {
+  		z-index: 5000;
+  		position: absolute;
+  		background: white;
+  		height: 140px;
+  		width: 140px;
+  		display: block;
+  		.opacity(0);
+  		cursor: pointer;
+  		left: 270px;
+			top: 154px;
+   
+ } 
+  
 }
 
 .greeting {
@@ -205,9 +228,14 @@ body {
 	font-family: @bold-font;
 	font-size: 8px;
 	color: @copy-color;
-	width: 500px;
+	width: 400px;
 	display: block;
-	
+ 	font-weight: normal;
+	span {
+  	font-weight: normal;
+  	font-size:9px;
+  	display: block;
+	}
 	a {
 		color: @copy-color;
 		
@@ -224,7 +252,7 @@ body {
 	
 	width: 666px;
 	height: 460px;
-	margin: 20px;
+	margin: 0px;
 	position: relative;
 
   &#ryobi_content {
@@ -234,6 +262,13 @@ body {
       line-height:130%;
     }
   }
+  &#dirtdevil_content {
+    
+    p {
+
+      padding: 115px 0 0 20px;
+    }
+  }
 	p {
 		display: block;
 		padding: 126px 0 0 20px;
@@ -241,6 +276,7 @@ body {
 		color: white;
 		font-family:@body-font;
     z-index: 1000;
+    font-size: 13px;
     position: relative;
 	}
 	img {
@@ -300,7 +336,7 @@ body {
         #cboxError{padding:50px; border:1px solid #ccc;}
         #cboxLoadedContent{margin-bottom:20px;}
         #cboxTitle{position:absolute; bottom:0px; left:0; text-align:center; width:100%; color:#999;}
-        #cboxCurrent{position:absolute; bottom:0px; left:100px; color:#999;}
+        #cboxCurrent{position:absolute; bottom:0px; left:100px; color:#999; display: none !important;}
         #cboxLoadingOverlay{background:#fff url(images/loading.gif) no-repeat 5px 5px;}
 
         /* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
@@ -312,7 +348,7 @@ body {
         #cboxSlideshow{position:absolute; bottom:0px; right:42px; color:#444;}
         #cboxPrevious{position:absolute; bottom:0px; left:0; color:#444;}
         #cboxNext{position:absolute; bottom:0px; left:63px; color:#444;}
-        #cboxClose{position:absolute; bottom:10px; right:20px; display:block; color:#444; text-indent: -9999px; background: url(../img/close.png) no-repeat; height: 13px; width: 13px; }
+        #cboxClose{position:absolute; bottom:0px; right:0px; display:block; color:#444; text-indent: -9999px; background: url(../img/close.png) no-repeat; height: 13px; width: 13px; }
 
 /*
   The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
